@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ONGarniza.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ONGarniza.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[Controller]")]
     public class EventoController : ControllerBase
     {
         private static List<Evento> eventos = new List<Evento>();
@@ -20,6 +18,7 @@ namespace ONGarniza.Controllers
             evento.Id = id++;
             eventos.Add(evento);
             return CreatedAtAction(nameof(RecuperaEventoPorId), new { Id = evento.Id }, evento);
+
         }
 
         [HttpGet]
@@ -29,7 +28,7 @@ namespace ONGarniza.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult RecuperaEventoPorId(int id)
+        public IActionResult RecuperaEventoPorId()
         {
             Evento evento = eventos.FirstOrDefault(evento => evento.Id == id);
             if(evento != null)
