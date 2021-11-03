@@ -39,6 +39,7 @@ namespace ONGarniza
         {
             if (env.IsDevelopment())
             {
+                Console.WriteLine("teste");
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ONGarniza v1"));
@@ -48,12 +49,13 @@ namespace ONGarniza
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseCors(x => x
+                 .AllowAnyMethod()
+                 .AllowAnyHeader()
+                 .SetIsOriginAllowed(origin => true)
+                 .AllowCredentials()); 
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(x => x.MapControllers());
         }
     }
 }
