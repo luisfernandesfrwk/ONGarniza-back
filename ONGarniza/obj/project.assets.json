@@ -193,19 +193,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\POSITIVO\\.nuget\\packages\\": {}
+    "C:\\Users\\Framework\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\POSITIVO\\source\\repos\\ONGarniza\\ONGarniza\\ONGarniza.csproj",
+      "projectUniqueName": "C:\\Users\\Framework\\Desktop\\Ongarniza-back\\ONGarniza-back\\ONGarniza\\ONGarniza.csproj",
       "projectName": "ONGarniza",
-      "projectPath": "C:\\Users\\POSITIVO\\source\\repos\\ONGarniza\\ONGarniza\\ONGarniza.csproj",
-      "packagesPath": "C:\\Users\\POSITIVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\POSITIVO\\source\\repos\\ONGarniza\\ONGarniza\\obj\\",
+      "projectPath": "C:\\Users\\Framework\\Desktop\\Ongarniza-back\\ONGarniza-back\\ONGarniza\\ONGarniza.csproj",
+      "packagesPath": "C:\\Users\\Framework\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Framework\\Desktop\\Ongarniza-back\\ONGarniza-back\\ONGarniza\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\POSITIVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Framework\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
