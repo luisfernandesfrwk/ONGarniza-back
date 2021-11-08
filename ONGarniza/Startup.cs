@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Serialization;
 
 namespace ONGarniza
 {
@@ -32,6 +33,13 @@ namespace ONGarniza
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ONGarniza", Version = "v1" });
             });
+
+            //JSON Serializer
+            services.AddControllersWithViews().AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
+                .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = 
+                new DefaultContractResolver());
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
